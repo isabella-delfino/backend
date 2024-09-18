@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 app.post('/send-email', async (req, res) => {
   const { name, email, message, subject } = req.body;
 
