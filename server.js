@@ -27,7 +27,7 @@ app.post('/send-email', async (req, res) => {
 
   // Define the email data
   const sendSmtpEmail = {
-    to: [{ email: 'blt.isabella.delphino@gmail.com', name: 'isabella' }],
+    to: [{ email: 'blt.isabella.delphino@gmail.com', name: 'isabella' }, { email: 'isabelle@plourdes.com', name: 'Isabella' }],
     sender: { email: 'blt.isabella.delphino@gmail.com', name: 'blt.isabella.delphino@gmail.com' },
     subject: `New Contact from ${name}`,
     htmlContent: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Subject: ${subject}\</p><p>Message: ${message}</p>`,
@@ -43,7 +43,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
